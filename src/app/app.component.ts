@@ -4,10 +4,11 @@ import { Product } from './Product.model';
 import { ProductComponent } from './product/product.component';
 import { CommonModule } from '@angular/common';
 import { CartComponent } from './cart/cart.component';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ProductComponent, CommonModule, CartComponent],
+  imports: [RouterOutlet, ProductComponent, CommonModule, CartComponent, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
