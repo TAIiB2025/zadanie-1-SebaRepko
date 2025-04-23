@@ -1,5 +1,9 @@
 <app-cart [wartoscKoszyka]="wartoscKoszyka"></app-cart>
 
+<button (click)="toggleProdukty()">
+  {{ pokazProdukty ? 'Ukryj produkty' : 'Pokaż produkty' }}
+</button>
+<div *ngIf="pokazProdukty">
 <app-product 
   [product]="produkty[0]" 
   (dodanoDoKoszyka)="dodajDoKoszyka($event)">
@@ -20,3 +24,4 @@
   [product]="produkty[4]" 
   (dodanoDoKoszyka)="dodajDoKoszyka($event)">
 </app-product>
+</div>

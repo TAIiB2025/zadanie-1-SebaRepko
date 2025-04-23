@@ -24,4 +24,10 @@ export class AppComponent {
   dodajDoKoszyka(cena: number): void {
     this.wartoscKoszyka += cena;
   }
+  pokazProdukty: boolean = true;
+
+  toggleProdukty(): void {
+    this.pokazProdukty = !this.pokazProdukty;
+  }
+
 }
