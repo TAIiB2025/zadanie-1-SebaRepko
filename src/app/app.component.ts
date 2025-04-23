@@ -30,4 +30,10 @@ export class AppComponent {
     this.pokazProdukty = !this.pokazProdukty;
   }
 
+  resetujKoszyk(): void {
+    this.wartoscKoszyka = 0; 
+    this.produkty.forEach(produkt => {
+      produkt.liczbaSztuk = 0; 
+    });
+  }
 }

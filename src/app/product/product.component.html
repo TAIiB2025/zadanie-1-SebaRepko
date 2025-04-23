@@ -11,7 +11,7 @@
       <td>{{ product.cena + ' zł' }}</td>
       <td>{{ product.dataUtworzenia | date: 'dd.MM.yyyy' }}</td>
       <button (click)="dodajDoKoszyka()">Dodaj!</button>
-      <td>{{liczbaSztuk}}</td>
+      <td>{{product.liczbaSztuk}}</td>
     </tr>
   </table>
   <br>

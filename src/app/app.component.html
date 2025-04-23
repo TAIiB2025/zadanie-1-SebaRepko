@@ -1,4 +1,7 @@
-<app-cart [wartoscKoszyka]="wartoscKoszyka"></app-cart>
+<app-cart 
+  [wartoscKoszyka]="wartoscKoszyka" 
+  (resetKoszyk)="resetujKoszyk()">
+</app-cart>
 
 <button (click)="toggleProdukty()">
   {{ pokazProdukty ? 'Ukryj produkty' : 'Pokaż produkty' }}

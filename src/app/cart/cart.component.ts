@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-cart',
@@ -8,4 +8,9 @@ import { Component, Input } from '@angular/core';
 })
 export class CartComponent {
   @Input() wartoscKoszyka: number = 0;
+  @Output() resetKoszyk = new EventEmitter<void>();
+  resetujKoszyk(): void {
+    this.wartoscKoszyka = 0; 
+    this.resetKoszyk.emit(); 
+  }
 }

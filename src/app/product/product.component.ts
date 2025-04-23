@@ -11,10 +11,10 @@ import { CommonModule } from '@angular/common';
 export class ProductComponent {
   @Input() product!: Product;
   @Output() dodanoDoKoszyka = new EventEmitter<number>();
-  liczbaSztuk: number = 0;
+
   dodajDoKoszyka(): void {
-    this.liczbaSztuk++;
-    this.dodanoDoKoszyka.emit(this.product.cena);
+    this.product.liczbaSztuk++;
+    this.dodanoDoKoszyka.emit(this.product.cena); 
   }
 }
 
