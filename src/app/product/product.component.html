@@ -1,0 +1,14 @@
+<table [ngStyle]="{ 'background-color': product.czyPromocja ? 'red' : 'white' }">
+    <tr>
+      <th>Nazwa</th>
+      <th>Cena</th>
+      <th>Data utworzenia</th>
+    </tr>
+    <tr>
+      <td>{{ product.nazwa }}</td>
+      <td>{{ product.cena + ' zł' }}</td>
+      <td>{{ product.dataUtworzenia | date: 'dd.MM.yyyy' }}</td>
+    </tr>
+  </table>
+  <br>
+  
