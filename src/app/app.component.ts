@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { Product } from './Product.model';
 import { ProductComponent } from './product/product.component';
 import { CommonModule } from '@angular/common';
+import { CartComponent } from './cart/cart.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ProductComponent, CommonModule],
+  imports: [RouterOutlet, ProductComponent, CommonModule, CartComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -18,4 +19,9 @@ export class AppComponent {
     new Product('Produkt 4', 50.0, new Date(2023, 3, 10), true),
     new Product('Produkt 5', 15.0, new Date(2019, 10, 5), false),
   ];
+  wartoscKoszyka: number = 0;
+
+  dodajDoKoszyka(cena: number): void {
+    this.wartoscKoszyka += cena;
+  }
 }

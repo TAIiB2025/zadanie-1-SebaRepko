@@ -3,12 +3,15 @@
       <th>Nazwa</th>
       <th>Cena</th>
       <th>Data utworzenia</th>
+      <th>Dodaj do koszyka</th>
     </tr>
     <tr>
       <td>{{ product.nazwa }}</td>
       <td>{{ product.cena + ' zł' }}</td>
       <td>{{ product.dataUtworzenia | date: 'dd.MM.yyyy' }}</td>
+      <button (click)="dodajDoKoszyka()">Dodaj!</button>
     </tr>
   </table>
   <br>
+  
   

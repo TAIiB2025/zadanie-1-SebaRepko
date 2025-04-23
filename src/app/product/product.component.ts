@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Product } from '../Product.model';
 import { CommonModule } from '@angular/common';
 
@@ -10,4 +10,10 @@ import { CommonModule } from '@angular/common';
 })
 export class ProductComponent {
   @Input() product!: Product;
+  @Output() dodanoDoKoszyka = new EventEmitter<number>();
+
+  dodajDoKoszyka(): void {
+    this.dodanoDoKoszyka.emit(this.product.cena);
+  }
 }
+

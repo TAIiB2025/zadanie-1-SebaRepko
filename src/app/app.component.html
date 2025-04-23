@@ -1,6 +1,22 @@
-<app-product [product]="produkty[0]"></app-product>
-<app-product [product]="produkty[1]"></app-product>
-<app-product [product]="produkty[2]"></app-product>
-<app-product [product]="produkty[3]"></app-product>
-<app-product [product]="produkty[4]"></app-product>
+<app-cart [wartoscKoszyka]="wartoscKoszyka"></app-cart>
 
+<app-product 
+  [product]="produkty[0]" 
+  (dodanoDoKoszyka)="dodajDoKoszyka($event)">
+</app-product>
+<app-product 
+  [product]="produkty[1]" 
+  (dodanoDoKoszyka)="dodajDoKoszyka($event)">
+</app-product>
+<app-product 
+  [product]="produkty[2]" 
+  (dodanoDoKoszyka)="dodajDoKoszyka($event)">
+</app-product>
+<app-product 
+  [product]="produkty[3]" 
+  (dodanoDoKoszyka)="dodajDoKoszyka($event)">
+</app-product>
+<app-product 
+  [product]="produkty[4]" 
+  (dodanoDoKoszyka)="dodajDoKoszyka($event)">
+</app-product>
