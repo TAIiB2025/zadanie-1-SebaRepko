@@ -4,12 +4,14 @@
       <th>Cena</th>
       <th>Data utworzenia</th>
       <th>Dodaj do koszyka</th>
+      <th>Liczba sztuk w koszyku</th>
     </tr>
     <tr>
       <td>{{ product.nazwa }}</td>
       <td>{{ product.cena + ' zł' }}</td>
       <td>{{ product.dataUtworzenia | date: 'dd.MM.yyyy' }}</td>
       <button (click)="dodajDoKoszyka()">Dodaj!</button>
+      <td>{{liczbaSztuk}}</td>
     </tr>
   </table>
   <br>
