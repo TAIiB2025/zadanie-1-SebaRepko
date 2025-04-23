@@ -11,10 +11,13 @@ import { CommonModule } from '@angular/common';
 export class ProductComponent {
   @Input() product!: Product;
   @Output() dodanoDoKoszyka = new EventEmitter<number>();
-
+  czyZwiniety: boolean = false;
   dodajDoKoszyka(): void {
     this.product.liczbaSztuk++;
     this.dodanoDoKoszyka.emit(this.product.cena); 
+  }
+  toggleWidok(): void {
+    this.czyZwiniety = !this.czyZwiniety; 
   }
 }
 
